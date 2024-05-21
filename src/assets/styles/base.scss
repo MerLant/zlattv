@@ -1,0 +1,42 @@
+@import '@/assets/fonts/fonts';
+
+$font-family: 'Roboto', sans-serif;
+$second-family: 'Barlow', sans-serif;
+$third-family: 'Montserrat', sans-serif;
+
+$colors: (
+  red: #9f0023,
+  gray: #f2f2f2,
+  medium-gray: #d2d2d2,
+  light-gray: #959595,
+  black: #373334,
+  white: #ffffff
+);
+
+$breakpoints: (
+  sm: 375,
+  md: 768,
+  lg: 1200,
+  xl: 1920
+);
+
+@function AdaptiveClamp($min, $max) {
+  @return clamp(
+    #{$min}px,
+    calc(
+      #{$min}px + (#{$max} - #{$min}) *
+        (
+          (100vw - #{map-get($breakpoints, md)}px) /
+            (#{map-get($breakpoints, xl)} - #{map-get($breakpoints, md)})
+        )
+    ),
+    #{$max}px
+  );
+}
+
+// Debug feature
+/* *,
+*::before,
+*::after {
+  outline: 1px solid blue;
+} */
