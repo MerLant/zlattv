@@ -1,18 +1,22 @@
-# .
+# ZLATTV
 
-This template should help get you started developing with Vue 3 in Vite.
+https://zlattv.hshcode.ru/
 
-## Recommended IDE Setup
+Сделал не всё, но упор был в то, чтобы сверстать под реальный проект (Где-то получилось подогнать в реалях проекта за 5 минут, а где-то не особо)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Не сделал 5 и 4 задание
 
-## Type Support for `.vue` Imports in TS
+[x] 1 - свайпер
+[x] 2 - Календарик сам написал
+[x] 3 - Dropdown сам
+[] 4 – Не дожил (А мб проснулся и сделал его)
+[] 5 - Попытаюсь сделать до пятницы, но возможно не успею, в понедельник
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+Pug - Мне честно не зашёл, html по python`вский
+Scss - юзал ИМБУЛИЧКА
+glup - хз, не до конца понял его прелести
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Также щас другой сайт делаю на Vue паралельно (хотя там по большей части, закончен, просто жду отмашки в прод (вот ссылка на него https://hshcode.ru/))
 
 ## Project Setup
 
