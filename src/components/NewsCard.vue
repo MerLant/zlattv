@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import {} from 'vue'
 import type { NewsPreview } from '@/models/news'
 import { IconHeroSwiperArrow } from '@/assets/images'
 
@@ -34,11 +34,6 @@ template(v-else)
   @media (min-width: #{map-get($breakpoints, md)}px) {
     width: 100%;
     gap: 35px;
-  }
-
-  &.highlighted {
-    background-color: map-get($colors, white);
-    /* Нужно доделать */
   }
 
   &__poster-wrapper {
@@ -136,6 +131,35 @@ template(v-else)
       display: block;
     }
   }
+}
+
+.highlighted {
+  &.news-card {
+    background-color: map-get($colors, white);
+    padding: 50px;
+
+    @media (min-width: #{map-get($breakpoints, md)}px) {
+      flex-direction: row;
+      /* justify-content: flex-end; */
+      align-items: stretch;
+    }
+
+    .news-card__content {
+      @media (min-width: #{map-get($breakpoints, md)}px) {
+        flex-grow: 1;
+        gap: 20px;
+        justify-content: space-between;
+        height: 100%;
+      }
+    }
+
+    .news-card__arrow {
+      @media (min-width: #{map-get($breakpoints, md)}px) {
+        margin-top: auto;
+      }
+    }
+  }
+  /* Нужно доделать */
 }
 .loading {
   text-align: center;
