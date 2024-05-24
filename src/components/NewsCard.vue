@@ -131,6 +131,10 @@ template(v-else)
       display: block;
     }
   }
+
+  &__paragraph {
+    display: none;
+  }
 }
 
 .highlighted {
@@ -158,8 +162,14 @@ template(v-else)
         margin-top: auto;
       }
     }
+
+    .news-card__paragraph {
+      display: block;
+      @media (min-width: #{map-get($breakpoints, md)}px) {
+        margin-top: auto;
+      }
+    }
   }
-  /* Нужно доделать */
 }
 .loading {
   text-align: center;
