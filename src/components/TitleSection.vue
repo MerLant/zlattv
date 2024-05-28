@@ -1,5 +1,5 @@
 <template lang="pug">
-p(class="title-section")
+h2(class="title-section")
     slot
 </template>
 

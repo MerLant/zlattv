@@ -165,9 +165,6 @@ template(v-else)
 
     .news-card__paragraph {
       display: block;
-      @media (min-width: #{map-get($breakpoints, md)}px) {
-        margin-top: auto;
-      }
     }
   }
 }

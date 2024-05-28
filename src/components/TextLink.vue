@@ -20,7 +20,7 @@ template(v-if="href && type !== 'action'")
     a(v-else-if="type === 'link'", :href="href", :class="['link', linkClass]" target="_blank")
         slot
 template(v-else)
-    p(:class="['link', linkClass]")
+    a(:class="['link', linkClass]", href="#")
         slot
 </template>
 
