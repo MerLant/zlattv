@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import { type Button, Color, getColorName } from '@/models'
+import { type Button, Color, getColorName, type ButtonProps } from '@/models'
 import { computed } from 'vue'
 
-const props = defineProps<{
-  type: Button
-  color?: Color
-  href?: string
-}>()
+const props = defineProps<ButtonProps>()
 
 const buttonClass = computed(() => {
   return props.color ? 'color-' + getColorName(props.color) : ''

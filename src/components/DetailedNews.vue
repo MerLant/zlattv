@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-import type { NewsDetailed } from '@/models/news'
+import type { NewsDetailed, DetailedNewsProps } from '@/models'
 
-defineProps<{
-  news: NewsDetailed
-}>()
+defineProps<DetailedNewsProps>()
 </script>
 
 <template lang="pug">

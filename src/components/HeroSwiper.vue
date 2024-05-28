@@ -5,13 +5,11 @@ import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/scss'
 import 'swiper/scss/pagination'
 
-import type { NewsList } from '@/models/news'
+import type { NewsList, ListNewsProps } from '@/models/'
 import { computed, ref } from 'vue'
 import { IconHeroSwiperArrow } from '@/assets/images'
 
-const props = defineProps<{
-  newsList: NewsList
-}>()
+const props = defineProps<ListNewsProps>()
 
 SwiperCore.use([Autoplay, Pagination])
 

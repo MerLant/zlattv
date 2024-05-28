@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { IconCalendar, IconRedArrow, IconVerticalArrow } from '@/assets/images'
+import { MonthNames, Weekdays } from '@/models'
 
 const today = new Date()
 const selectedDate = ref<Date | null>(null)
@@ -9,21 +10,13 @@ const currentYear = ref(today.getFullYear())
 const isCalendarOpen = ref(false)
 const calendarRef = ref<HTMLElement | null>(null)
 
-const monthNames = [
-  'Январь',
-  'Февраль',
-  'Март',
-  'Апрель',
-  'Май',
-  'Июнь',
-  'Июль',
-  'Август',
-  'Сентябрь',
-  'Октябрь',
-  'Ноябрь',
-  'Декабрь'
-]
-const weekdays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+const getMonthName = (monthIndex: number) => {
+  return Object.values(MonthNames)[monthIndex]
+}
+
+const getWeekdayName = (weekdayIndex: number) => {
+  return Object.values(Weekdays)[weekdayIndex]
+}
 
 const daysInMonth = computed(() => {
   const days = []
@@ -123,15 +116,15 @@ div.calendar(ref="calendarRef")
     div.calendar__header
       button.calendar__nav-button(@click="prevMonth")
         IconRedArrow
-      span.calendar__month-year {{ monthNames[currentMonth] }}
+      span.calendar__month-year {{ getMonthName(currentMonth.value) }}
       button.calendar__nav-button(@click="nextMonth")
         IconRedArrow(style="transform: rotate(180deg)")
     div.calendar__weekdays
-      div.calendar__weekday(v-for="day in weekdays", :key="day") {{ day }}
+      div.calendar__weekday(v-for="day in Object.values(Weekdays)", :key="day") {{ day }}
     div.calendar__days
-        div.calendar__day(v-for="day in daysInMonth", :key="day.date ? day.date : day.index", @click="day.date && selectDay(day.date)")
-            div.calendar__day-text(:class="{ 'calendar__day-text--today': day.date && isToday(day.date), 'calendar__day-text--selected': day.date && isSelected(day.date), 'calendar__day-text--empty': !day.date }")
-                | {{ day.date ? day.date.getDate() : '' }}
+      div.calendar__day(v-for="day in daysInMonth", :key="day.date ? day.date : day.index", @click="day.date && selectDay(day.date)")
+        div.calendar__day-text(:class="{ 'calendar__day-text--today': day.date && isToday(day.date), 'calendar__day-text--selected': day.date && isSelected(day.date), 'calendar__day-text--empty': !day.date }")
+          | {{ day.date ? day.date.getDate() : '' }}
 </template>
 
 <style lang="scss" scoped>

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import type { SocialProps } from '@/models'
 import { IconOK, IconInstagram, IconVK, IconYoutube, IconFacebook } from '@/assets/images'
 
-const props = defineProps<{
-  isVertical?: boolean
-}>()
+const props = defineProps<SocialProps>()
+
 const containerClass = computed(() => {
   return `${props.isVertical ? 'social-icons--vertical' : 'social-icons--horizontal'}`
 })

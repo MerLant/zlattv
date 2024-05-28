@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import {} from 'vue'
-import type { NewsPreview } from '@/models/news'
+import type { CardNewsProps } from '@/models'
 import { IconHeroSwiperArrow } from '@/assets/images'
 
-const props = defineProps<{ news?: NewsPreview; highlighted: Boolean }>()
+defineProps<CardNewsProps>()
 </script>
 
 <template lang="pug">

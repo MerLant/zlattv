@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import { TitleSection } from '@/components'
-
-defineProps<{
-  categoryId: number
-}>()
 </script>
 
 <template lang="pug">

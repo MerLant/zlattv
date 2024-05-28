@@ -31,3 +31,19 @@ export interface NewsList {
 export interface NewsDetailed extends NewsPreview {
   content?: string
 }
+
+export interface DetailedNewsProps {
+  news: NewsDetailed
+}
+
+export interface PreviewNewsProps {
+  news: NewsPreview
+}
+
+export interface ListNewsProps {
+  newsList: NewsList
+}
+
+export interface CardNewsProps extends PreviewNewsProps {
+  highlighted?: Boolean
+}

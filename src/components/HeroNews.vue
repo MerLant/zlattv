@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { getNewsList } from '@/api'
 import { ref } from 'vue'
-import type { NewsPreview } from '@/models/news'
 import { BaseButton } from '@/components'
-import { Color } from '@/models'
+import { Color, type PreviewNewsProps } from '@/models'
 
-defineProps<{
-  news: NewsPreview
-}>()
+defineProps<PreviewNewsProps>()
 </script>
 
 <template lang="pug">

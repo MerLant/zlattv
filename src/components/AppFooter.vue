@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { DividerBlock, SocialLinks, TextLink } from '@/components'
 import { IconXpage } from '@/assets/images'
-
-defineProps<{
-  categoryId: number
-}>()
 </script>
 
 <template lang="pug">

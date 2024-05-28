@@ -1,11 +1,7 @@
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { IconVerticalArrow } from '@/assets/images'
-
-interface DropdownItem {
-  id: number
-  label: string
-}
+import type { DropdownItem } from '@/models'
 
 const isOpen = ref(false)
 const items = ref<DropdownItem[]>([
